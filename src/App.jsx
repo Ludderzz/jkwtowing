@@ -11,7 +11,7 @@ export default function App(){return(<>
 <div className="wrap"><p className="tag">24/7 recovery service</p><h1>Getting you<br/>back on track.</h1>
 <p className="lead">Professional vehicle recovery and transport. Local, national, and fully insured, at competitive prices.</p>
 <div className="row"><Phone/><a className="btn ghost" href="#services">What we recover</a></div></div>
-<ul className="facts"><li>Fast response</li><li>Fully insured</li><li>Local and national</li><li>Any distance</li></ul></section>
+<div className="facts"><ul>{[0,1].map(k=>["Fast response","Fully insured","Local and national","Any distance"].map(t=><li key={k+t} className={k?"dup":""} aria-hidden={k?true:undefined}>{t}</li>))}</ul></div></section>
 <Recovery/>
 <section id="services" className="wrap sec"><h2>Whatever it is, we move it</h2>
 <ul className="svc">{SERVICES.map(([a,b])=><li key={a}><h3>{a}</h3><p>{b}</p></li>)}</ul></section>
